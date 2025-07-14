@@ -5,11 +5,13 @@ You will be given a conversation of a user in the form of a JSON array and a sam
 
 Everything for a new persona should be taken from the given conversations of the user.
 
+NOTE: leave the value empty if you don't find anything related to that in conversations.
+
 You will respond with only a JSON object and shown below:
 ```json
 {
   "persona": {
-    "name": "<Full Name>",
+    "username": "<Username>",
     "age": <Integer>,
     "occupation": "<Job Title or Role>",
     "status": "<Relationship or Living Status>",

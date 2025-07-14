@@ -14,7 +14,7 @@ class Reddit:
         self.reddit = praw.Reddit(
             client_id=os.getenv("REDDIT_CLIENT_ID"),
             client_secret=os.getenv("REDDIT_SECRET"),
-            user_agent="persona-creator-agent/0.1 by u/YOUR_USERNAME"
+            user_agent=f"persona-creator-agent/0.1 by u/{os.getenv('REDDIT_USERNAME')}"
         )
 
     def get_user_comments(self, username):
