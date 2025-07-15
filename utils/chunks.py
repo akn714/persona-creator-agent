@@ -1,4 +1,10 @@
+import json
 import tiktoken
+
+tokenizer = tiktoken.get_encoding("cl100k_base")
+
+def count_tokens(text: str) -> int:
+    return len(tokenizer.encode(text))
 
 def split_into_token_chunks(comments, max_tokens):
     chunks, current_chunk, current_tokens = [], [], 0
