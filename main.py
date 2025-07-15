@@ -56,7 +56,7 @@ def save_persona(username, persona):
     os.makedirs("personas", exist_ok=True)
 
     # Save to file inside 'personas' folder
-    file_path = os.path.join("personas", f"{username}_persona.json")
+    file_path = os.path.join("personas", f"{username}_persona.txt")
     with open(file_path, "w") as f:
         json.dump(persona, f, indent=2)
 
